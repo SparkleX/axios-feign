@@ -1,24 +1,38 @@
-# Generic Pool Support for [db-conn](https://www.npmjs.com/package/db-conn)
+# open feign support in typescript use axios
 
 Example
 
 ```
-const dbConfig = {
+class RestApi {
+	@get("/get/{a}?b={b}")
+	public async getTest(param: object):Promise<void> {
+		throw -1;
+	}
+	@post("/post/{a}?b={b}")
+	public async postTest(param: object, body: any):Promise<object> {
+		throw -1;
+	}
+	@put("/put/{a}?b={b}")
+	public async putTest(param: object, body: any):Promise<object> {
+		throw -1;
+	}
+	@del("/delete/{a}?b={b}")
+	public async deleteTest(param: object, body: any):Promise<object> {
+		throw -1;
+	}
+}
 
-}
-const poolConfig: any = {
-    min: 2,
-    max: 5
-}
-const driver = new XXXDriver();
-const pool: DataSource = new GenericPool(driver, dbConfig, poolConfig);
-const conn1 = await pool.getConnection();
-const conn2 = await pool.getConnection();
-await conn1.close();
-await conn2.close();
-await pool.close();
+const feign = new FeignBuilder(axios);
+const oTest = feign.target(RestApi);
+
 ```
 
----
-
-
+Get with params
+```
+const rt = await oTest.getTest( {a:100, b:200});
+```
+Post with body
+```
+const body = {data: 1};
+const rt = await oTest.postTest( {a:100, b:200}, body);
+```
