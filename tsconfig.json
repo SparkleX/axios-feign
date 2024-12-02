@@ -1,21 +1,25 @@
 {
-    "compilerOptions": {
-        "target": "es6",
-        "module": "commonjs",
+	"compileOnSave": true,
+	"compilerOptions": {
+		"moduleResolution": "nodenext",
+		"esModuleInterop": true,
+		"module": "NodeNext",
+		"target": "ESNext",
 		"outDir": "dist",
-		"noImplicitAny": true,
 		"declaration": true,
 		"sourceMap": true,
-		"strict": true,
-		"esModuleInterop": true,
-		"strictPropertyInitialization": false,
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true
-    },
-    "include": [
-		  "src"
-    ],
-    "exclude": [
-        "**/*.spec.ts"
-    ]
+		"alwaysStrict": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true
+	},
+	"include": [
+		"src"
+	],
+	"exclude": [
+		"**/*.spec.ts"
+	],
+	"ts-node": {
+		"esm": true,
+		"experimentalSpecifierResolution": "node"
+	}
 }

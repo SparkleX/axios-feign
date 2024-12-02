@@ -1,4 +1,4 @@
-import formatUnicorn from "format-unicorn/safe";
+import format from 'string-format';
 
 
 
@@ -8,7 +8,7 @@ async function httpInvoke (ths: any, method: string,url: string, param: any, bod
 		const value = param[key];
 		param[key] = encodeURI(value);
 	}
-	const fmtUrl = formatUnicorn(url, param);
+	const fmtUrl = format(url, param);
 	const rt = await axois[method](fmtUrl, body);
 	return rt.data;
 }

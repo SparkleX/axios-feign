@@ -1,2 +1,2 @@
-export * from "./FeignBuilder";
-export * from "./FeignDecorator";
+export * from "./FeignBuilder.js";
+export * from "./FeignDecorator.js";

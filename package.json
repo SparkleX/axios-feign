@@ -1,8 +1,9 @@
 {
 	"name": "axios-feign",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "open feign of typescript use axios",
 	"main": "dist/index.js",
+	"type": "module",
 	"scripts": {
 		"prebuild": "npm run clean",
 		"build": "tsc",
@@ -12,19 +13,20 @@
 	"author": "Sun, Xufei",
 	"license": "MIT",
 	"dependencies": {
-		"axios": "^0.20.0",
-		"format-unicorn": "^1.1.1"
+		"axios": "^1.7.8",
+		"format-unicorn": "^1.1.1",
+		"string-format": "^2.0.0"
 	},
 	"devDependencies": {
-		"@types/axios": "^0.14.0",
-		"@types/format-unicorn": "^1.1.2",
-		"@types/jest": "^26.0.9",
-		"@types/node": "^12.12.12",
-		"axios-mock-adapter": "^1.18.2",
-		"jest": "^26.3.0",
-		"rimraf": "^3.0.2",
-		"ts-jest": "^26.2.0",
-		"typescript": "^3.6.4"
+		"@types/axios": "^0.14.4",
+		"@types/format-unicorn": "^1.1.5",
+		"@types/jest": "^29.5.14",
+		"@types/node": "^22.10.1",
+		"axios-mock-adapter": "^2.1.0",
+		"jest": "^29.7.0",
+		"rimraf": "^6.0.1",
+		"ts-jest": "^29.2.5",
+		"typescript": "^5.7.2"
 	},
 	"keywords": [
 		"axios",

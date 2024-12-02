@@ -1,4 +1,4 @@
-import { FeignBuilder } from "../FeignBuilder";
+import { FeignBuilder } from "../FeignBuilder.js";
 import { default as axios, AxiosInstance } from "axios";
 
 
